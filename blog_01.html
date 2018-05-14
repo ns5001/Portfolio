@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Behind The Scenes - Machine Language</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+ <nav>
+   <div class="collapse navbar-collapse">
+     <ul class="nav navbar-nav navbar-right">
+         <li>
+           <a class="page-scroll" href="index.html#blogs">Back to main page</a>
+         </li>
+     </ul>
+   </div>
+ </div>
+ </nav>
+    <header class="intro-header" style="background-image: url('img/post-bg.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>Behind The Scenes: Machine Language</h1>
+                        <h2 class="subheading">What happens under the hood when you code?</h2>
+                        <span class="meta">by Naveed Shah</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  <br>
+                  <p class="wb-stl-normal" style="text-align: center;"><img class="size-full wp-image-29 aligncenter" src="assets/img/blog/b_01.jpg" width="600" height="424" /></p>
+
+                  <p style="text-align: justify;">As human beings we give instructions to our computer in the form of programming languages such as C++, Java, Ruby, Python, and more. We translate logic into code, and then our compiler translates our code into assembly language that gives direct commands to our CPU</p>
+
+                  <p style="text-align: justify;">Programmer thinks of instructions in human logic <strong>-></strong> Programmer writes the logic in a programming language  <strong>-></strong> Compiler converts this code into machine language and the CPU acts accordingly</p>
+                  <p style="text-align: center;"><span style="text-decoration: underline;"><strong>Some Machine Languages: </strong></span></p>
+                  <p class="wb-stl-normal" style="text-align: center;">1) MIPS</p>
+                  <p class="wb-stl-normal" style="text-align: center;">2) ARM</p>
+                  <p class="wb-stl-normal" style="text-align: center;">3) DEC PDP-6/PDP-10/DECSYSTEM-20</p>
+                  <p class="wb-stl-normal" style="text-align: center;">4) DEC PDP-11</p>
+                  <p class="wb-stl-normal" style="text-align: center;">5) DEC VAX</p>
+                  <p class="wb-stl-normal" style="text-align: center;">6) DEC Alpha</p>
+                  <p class="wb-stl-normal" style="text-align: center;">7) Intel 8008, 8080 and 8085</p>
+                  <p class="wb-stl-normal" style="text-align: center;">8) x86</p>
+                  <p class="wb-stl-normal" style="text-align: center;">9) Motorola 6800</p>
+                  <p class="wb-stl-normal" style="text-align: center;">10) National NS320xx</p>
+                  <p class="wb-stl-normal" style="text-align: center;">11) Oracle SPARC</p>
+                  <p class="wb-stl-normal" style="text-align: center;">12) MCST Elbrus 2000</p>
+                  <p class="wb-stl-normal" style="text-align: justify;">Now before we delve into MIPS and see how C code gets converted to direct CPU commands, let's get familiar first with some important elements of a CPU. In addition to this, we need to speak the language of a CPU, you guessed it, binary code.</p>
+                  <p class="wb-stl-normal" style="text-align: center;"><img class=" size-full wp-image-29 aligncenter" src="https://naveedshahblog.files.wordpress.com/2016/08/h7638960e.png" width="500" height="324" /></p>
+
+                  <h4 class="wb-stl-subtitle" style="text-align: center;"><strong>0         0        0        0       0       0      0     0     0     0    0    0     0   - Binary (Base 2)</strong></h4>
+                  <h4 class="wb-stl-subtitle" style="text-align: center;"><strong>4096  2048 1024  512   256   128    64   32   16   8    4    2      1   - Decimal (Base 10)</strong></h4>
+                  <p class="wb-stl-normal" style="text-align: justify;">If you thought there's only 1 number system in the world, think again. There are at least 16 number systems, but modern day human beings count in only system, the Decimal Base 2 number system.</p>
+                  <p class="wb-stl-normal" style="text-align: justify;">The CPU takes in Binary code as on/off commands, and through electric signals executes the code a programmer provides. This means code isn't actually all virtual. At some point in time the code a programmer writes becomes electric signals inside the CPU. Isn't that cool? Think about that next time you code. Your computer can actually physically "feel" your code.</p>
+                  <p class="wb-stl-normal" style="text-align: justify;">Now where do these electric symbols go, what do they do, and how is it all done? The following is an example of a simplified CPU:</p>
+                  <p class="wb-stl-normal" style="text-align: justify;"><img class="alignnone  wp-image-30" src="https://naveedshahblog.files.wordpress.com/2016/08/sc91-architecture.gif" alt="sc91-architecture.gif" width="685" height="461" /></p>
+                  <p class="wb-stl-normal" style="text-align: justify;">As intimidating as that looks, it's actually very simple. It's composed of these core parts:</p>
+                  <p class="wb-stl-normal" style="text-align: center;"><img class="alignnone size-full wp-image-31" src="https://naveedshahblog.files.wordpress.com/2016/08/and.gif" alt="and" width="299" height="226" /><img class="alignnone size-full wp-image-40" src="https://naveedshahblog.files.wordpress.com/2016/08/xnorb.gif" alt="xnorb" width="299" height="225" /><img class="alignnone size-full wp-image-35" src="https://naveedshahblog.files.wordpress.com/2016/08/nand.gif" alt="nand" width="301" height="226" /><img class="alignnone size-full wp-image-38" src="https://naveedshahblog.files.wordpress.com/2016/08/or.gif" alt="or" width="301" height="227" /><img class="alignnone size-full wp-image-37" src="https://naveedshahblog.files.wordpress.com/2016/08/nor.gif" alt="nor" width="297" height="227" /><img class="alignnone size-full wp-image-41" src="https://naveedshahblog.files.wordpress.com/2016/08/xor.gif" alt="xor" width="299" height="227" /></p>
+                  <p class="wb-stl-normal" style="text-align: justify;">Now let's dive into an actual example of code being converted to machine language. We'll use everyone's favorite (sarcasm) C ++ and translate it to MIPS</p>
+                  <p class="wb-stl-normal" style="text-align: left;"><span style="text-decoration: underline;"><strong>C++</strong></span></p>
+                  <p class="wb-stl-normal" style="text-align: left;">#include</p>
+                  <p class="wb-stl-normal" style="text-align: left;">using namespace std;</p>
+                  <p class="wb-stl-normal" style="text-align: left;">int main() {</p>
+                  int g = 10;
+
+                  int h = 15;
+
+                  int i = 20;
+
+                  int j = 35;
+
+                  int f = (g + h) - (i + j);
+
+                  cout << f << endl;
+                  <p class="wb-stl-normal" style="text-align: left;">return 0 }</p>
+                  <p class="wb-stl-normal"><strong><span style="text-decoration: underline;">MIPS</span></strong></p>
+                  <p class="wb-stl-normal" style="text-align: center;"> int f = (g + h) - (i + j); </p>
+
+                  <p class="wb-stl-normal" style="text-align: center;"> add $t0, $s1, $s2 </p>
+                  <p class="wb-stl-normal" style="text-align: center;"> add $t1, $s3, $s4 </p>
+                  <p class="wb-stl-normal" style="text-align: center;"> sub $s0, $t0, $t1 </p>
+
+                  <p class="wb-stl-normal"><strong><span style="text-decoration: underline;">C</strong></p>
+
+                    <p class="wb-stl-normal" style="text-align: center;">(int array[], int size) { </p>
+
+                    <p class="wb-stl-normal" style="text-align: center;">int i; </p>
+
+                    <p class="wb-stl-normal" style="text-align: center;">for (i = 0; i < size; i += 1) </p>
+
+                    <p class="wb-stl-normal" style="text-align: center;">array[i] = 0; }</p>
+
+
+
+
+                <p class="wb-stl-normal" style="text-align: justify;"><img class="alignnone size-full wp-image-43" src="https://naveedshahblog.files.wordpress.com/2016/08/screen-shot-2016-08-12-at-7-15-58-am.png" alt="Screen Shot 2016-08-12 at 7.15.58 AM.png" width="845" height="354" /></p>
+                <p class="wb-stl-normal" style="text-align: justify;">Then that MIPS code gets converted into instruction sets in Binary code and gets sent to the CPU for execution. After the CPU executes the code the memory manages the results. And that's what's happening under the hood when you code.</p>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <hr>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>

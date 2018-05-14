@@ -1,0 +1,280 @@
+<div class="collapse navbar-collapse">
+  <ul class="nav navbar-nav navbar-right">
+      <li>
+        <a class="page-scroll" href="#about">About</a>
+      </li>
+      <li>
+        <a class="page-scroll" href="#skills">Skills</a>
+      </li>
+      <li>
+        <a class="page-scroll" href="#portfolio">Portfolio</a>
+      </li>
+      <li>
+        <a class="page-scroll" href="#experience">Resume</a>
+      </li>
+      <!-- <li>
+        <a class="page-scroll" href="#reviews">Reviews</a>
+      </li> -->
+      <!-- <li>
+        <a class="page-scroll" href="#blog">Blog</a>
+      </li> -->
+      <li>
+        <a class="page-scroll" href="#contact">Contact</a>
+      </li>
+  </ul>
+
+
+  <!-- Work Strategy -->
+  <!-- <section id="strategy">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="sub-headline">Work strategy<span class="dot">.</span></h2>
+        </div>
+      </div>
+      <div class="row sub-icon">
+        <div class="col-md-4">
+
+          <div class="wow fadeInDown" data-wow-duration="1s" data-wow-delay=".2s">
+            <h3><span class="ti-light-bulb"></span>Ideas</h3>
+            <p>Lorem ipsum dolor sit amet, mundi invidunt persequeris eu sed ridens facilisis eum.</p>
+          </div>
+
+          <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+            <h3><span class="ti-pencil"></span>Design</h3>
+            <p>Lorem ipsum dolor sit amet, mundi invidunt persequeris eu sed ridens facilisis eum.</p>
+          </div>
+
+          </div>
+          <div class="col-md-4">
+            <img src="assets/img/2.png" class="img-responsive center-block" alt="">
+          </div>
+          <div class="col-md-4">
+
+          <div class="wow fadeInDown" data-wow-duration="1s" data-wow-delay=".2s">
+            <h3><span class="ti-control-shuffle"></span>Approve</h3>
+            <p>Lorem ipsum dolor sit amet, mundi invidunt persequeris eu sed ridens facilisis eum.</p>
+          </div>
+
+          <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+            <h3><span class="ti-upload"></span>Live</h3>
+            <p>Lorem ipsum dolor sit amet, mundi invidunt persequeris eu sed ridens facilisis eum.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!-- END: Work strategy -->
+
+
+  <!-- <div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12 item-filter bot-margin">
+        <ul class="list-inline text-center">
+          <li class="filter" data-filter="all">All</li>
+          <li class="filter" data-filter=".print">Print</li>
+          <li class="filter" data-filter=".brand">Brand</li>
+          <li class="filter" data-filter=".logo">Logo</li>
+        </ul>
+      </div>
+      <div id="portfolio-items" class="col-md-12 col-sm-12 col-xs-12">
+        <div class="row">
+          <div class="col-md-3 col-sm-12 col-xs-12 mix brand" data-myorder="1">
+            <a href="#" data-toggle="modal" data-target="#portfolio1">
+              <div class="img-wrap">
+                <img src="assets/img/portfolio/portfolio01.jpg" alt="" class="img-responsive center-block">
+                <div class="img-overlay"></div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-12 col-xs-12 mix logo" data-myorder="2">
+            <a href="#" data-toggle="modal" data-target="#portfolio1">
+              <div class="img-wrap">
+                <img src="assets/img/portfolio/portfolio02.jpg" alt="" class="img-responsive center-block">
+                <div class="img-overlay"></div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-12 col-xs-12 mix print" data-myorder="3">
+            <a href="#" data-toggle="modal" data-target="#portfolio1">
+              <div class="img-wrap">
+                <img src="assets/img/portfolio/portfolio03.jpg" alt="" class="img-responsive center-block">
+                <div class="img-overlay"></div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-12 col-xs-12 mix logo" data-myorder="4">
+            <a href="#" data-toggle="modal" data-target="#portfolio1">
+              <div class="img-wrap">
+                <img src="assets/img/portfolio/portfolio04.jpg" alt="" class="img-responsive center-block">
+                <div class="img-overlay"></div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-12 col-xs-12 mix brand" data-myorder="4">
+            <a href="#" data-toggle="modal" data-target="#portfolio1">
+              <div class="img-wrap">
+                <img src="assets/img/portfolio/portfolio05.jpg" alt="" class="img-responsive center-block">
+                <div class="img-overlay"></div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-12 col-xs-12 mix brand" data-myorder="4">
+            <a href="#" data-toggle="modal" data-target="#portfolio1">
+              <div class="img-wrap">
+                <img src="assets/img/portfolio/portfolio06.jpg" alt="" class="img-responsive center-block">
+                <div class="img-overlay"></div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-12 col-xs-12 mix print" data-myorder="4">
+            <a href="#" data-toggle="modal" data-target="#portfolio1">
+              <div class="img-wrap">
+                <img src="assets/img/portfolio/portfolio07.jpg" alt="" class="img-responsive center-block">
+                <div class="img-overlay"></div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-12 col-xs-12 mix print" data-myorder="4">
+            <a href="#" data-toggle="modal" data-target="#portfolio1">
+              <div class="img-wrap">
+                <img src="assets/img/portfolio/portfolio08.jpg" alt="" class="img-responsive center-block">
+                <div class="img-overlay"></div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+
+
+    <!-- END: Portfolio -->
+
+    <!-- Milestone counter -->
+    <!-- <section id="milestone">
+      <div class="container">
+        <div class="row sub-icon">
+          <div class="col-md-3 col-sm-6 col-xs-6 text-center">
+            <h2 class="counter">804</h2>
+            <h3><span class="ti-package"></span>Projects</h3>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-6 text-center">
+            <h2 class="counter">1520</h2>
+            <h3><span class="ti-download"></span>Downloads</h3>
+
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-6 text-center">
+            <h2 class="counter">780</h2>
+            <h3><span class="ti-heart"></span>Clients</h3>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-6 text-center">
+            <h2 class="counter">15</h2>
+            <h3><span class="ti-cup"></span>Awards</h3>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!-- END: Milestone counter -->
+
+
+    <!-- Reviews -->
+    <!-- <section id="reviews">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="sub-headline">What people say<span class="dot">.</span></h2>
+          </div>
+        </div>
+        <div class="row top-pad">
+          <div id="reviews-slider">
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-sm-4 wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
+                  <img src="assets/img/reviews/01.jpg" alt="" class="img-responsive center-block">
+                </div>
+                <div class="col-sm-8 sub-icon wow fadeIn" data-wow-duration="1.5s" data-wow-delay=".5s">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae sem laoreet mattis arcu lacinia.</p>
+                  <h3><span class="ti-comment-alt"></span>Matt Preston</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-sm-4 wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
+                  <img src="assets/img/reviews/02.jpg" alt="" class="img-responsive center-block">
+                </div>
+                <div class="col-sm-8 sub-icon wow fadeIn" data-wow-duration="1.5s" data-wow-delay=".5s">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae sem laoreet mattis arcu lacinia.</p>
+                  <h3><span class="ti-comment-alt"></span>Thomas Clark</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-sm-4 wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
+                  <img src="assets/img/reviews/03.jpg" alt="" class="img-responsive center-block">
+                </div>
+                <div class="col-sm-8 sub-icon wow fadeIn" data-wow-duration="1.5s" data-wow-delay=".5s">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae sem laoreet mattis arcu lacinia.</p>
+                  <h3><span class="ti-comment-alt"></span>Christine Jones</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!-- END: Reviews -->
+
+    <!-- Brands -->
+    <!-- <section id="brands">
+      <div class="container">
+        <div class="row">
+          <div id="brands-slider">
+            <div class="col-md-12">
+              <img src="assets/img/brands/01.png" alt="" class="img-responsive center-block">
+            </div>
+            <div class="col-md-12">
+              <img src="assets/img/brands/02.png" alt="" class="img-responsive center-block">
+            </div>
+            <div class="col-md-12">
+              <img src="assets/img/brands/03.png" alt="" class="img-responsive center-block">
+            </div>
+            <div class="col-md-12">
+              <img src="assets/img/brands/04.png" alt="" class="img-responsive center-block">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!-- END: Brands -->
+
+    <!-- Footer -->
+    <!-- <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <ul class="list-inline social-icon">
+              <li><a href="#"><span class="ti-facebook"></span></a></li>
+              <li><a href="#"><span class="ti-google"></span></a></li>
+              <li><a href="#"><span class="ti-twitter"></span></a></li>
+              <li><a href="#"><span class="ti-dribbble"></span></a></li>
+              <li><a href="#"><span class="ti-skype"></span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer> -->
+    <!-- END: Footer -->
+
+  <!-- Project types -->
+    <!-- <div class="col-md-12 col-sm-12 col-xs-12 item-filter bot-margin">
+        <ul class="list-inline text-center">
+          <li class="filter" data-filter="all">All</li>
+          <li class="filter" data-filter=".print">Print</li>
+          <li class="filter" data-filter=".brand">Brand</li>
+          <li class="filter" data-filter=".logo">Logo</li>
+        </ul>
+      </div> -->
+ <!-- END: Project types -->

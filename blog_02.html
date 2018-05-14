@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Agora Talaiporía</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+ <nav>
+   <div class="collapse navbar-collapse">
+     <ul class="nav navbar-nav navbar-right">
+         <li>
+           <a class="page-scroll" href="index.html#blogs">Back to main page</a>
+         </li>
+     </ul>
+   </div>
+ </div>
+ </nav>
+    <header class="intro-header" style="background-image: url('img/post-bg.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>Agora Talaiporía</h1>
+                        <h2 class="subheading">My experience building my first Ruby on Rails Website</h2>
+                        <span class="meta">by Naveed Shah</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  <br>
+                  <p class="wb-stl-normal" style="text-align: center;"><img class="size-full wp-image-29 aligncenter" src="assets/img/blog/b_02.jpg" width="600" height="424" /></p>
+
+                  <p style="text-align: justify;">Building Agora, as my first Ruby on Rails website while ensuring that I follow conventional RESTful rules of programming was a challenge. Many times my code would work perfectly, but I would have to refactor it in order to make it RESTful. The following is a summary of the biggest challenge I faced, implementing a nested form in RESTful convention.</p>
+
+                  <span style="text-decoration: underline;"><strong>Nested Form</strong></span>
+
+                  <p class="wb-stl-normal" style="text-align: justify;">Nested forms and I have a bitter-sweet relationship. While they are a great way to get work done, creating them in a RESTful convention for Agora was a painful learning experience.</p>
+
+                  <p class="wb-stl-normal" style="text-align: justify;">In it's orthodox usage, nested forms are used when created 2 different objects. For example:</p>
+
+                    <p class="wb-stl-normal" style="text-align: left;"><%= form_for @student do |f| %></p>
+                    <p class="wb-stl-normal" style="text-align: left;"><%= f.text_field :name %></p>
+                    <p class="wb-stl-normal" style="text-align: left;"><%= f.text_field :age %></p>
+                    <p class="wb-stl-normal" style="text-align: left;"><%= f.text_field :class %></p>
+
+                    <p class="wb-stl-normal" style="text-align: left;"><%= f.fields_for :teacher, Teacher.new do |f| %></p>
+                    <p class="wb-stl-normal" style="text-align: left;"><%= f.text_field :name %></p>
+                    <p class="wb-stl-normal" style="text-align: left;"><%= f.text_field :subject %></p>
+                    <p class="wb-stl-normal" style="text-align: left;"><% end %></p>
+                    <p class="wb-stl-normal" style="text-align: left;"><% end %></p>
+                  </p>
+
+                <p class="wb-stl-normal" style="text-align: justify;">Here we are creating an instance of student as well as an instance of teacher. But Agora doesn't exactly work this way. In Agora there are 5 tables:</p>
+
+                <p class="wb-stl-normal" style="text-align: left;">
+                  <ol>
+                  	<li>Apartment</li>
+                  	<li>List</li>
+                  	<li>User</li>
+                  	<li>ApartmentList</li>
+                  	<li>Comment</li>
+                  </ol>
+                </p>
+
+                <p class="wb-stl-normal" style="text-align: justify;">Apartment instances get created when rake db:seed is run. Apartments uses Agora's top of the line scraper to scrape live real estate websites, and then creates the apartment instances. A user can never create an apartment instance.</p>
+
+                <p class="wb-stl-normal" style="text-align: justify;">Now a user can have many lists, and a list can have many apartments. A list is a way for a user to keep track of apartments that may be of interest. If a user creates a list and inserts an apartment into that list, this creates an instance in the ApartmentList join table. Now in that join table has many comments. So every instance of ApartmentList (Every time a user inserts an apartment into a list) has multiple instances of comment (which contain the text the user writes as a note for that respective apartment/list join).</p>
+
+                <p class="wb-stl-normal" style="text-align: justify;">Okay if you made it this far without looking confused, than the rest should be easy. (Im very sarcastic FYI).</p>
+
+                <p class="wb-stl-normal" style="text-align: justify;">Now the nested form in Agora is a triple nested form, where Apartment is getting updated, and list is either getting updated or created, and comment may be getting created, or maybe not.</p>
+
+                <img class="alignnone size-full wp-image-419" src="https://naveedshahblog.files.wordpress.com/2016/10/screen-shot-2016-10-29-at-6-43-31-pm.png" alt="Screen Shot 2016-10-29 at 6.43.31 PM.png" width="860" height="523" />
+
+                <strong>This produces:</strong>
+
+                <img class="alignnone size-full wp-image-422" src="https://naveedshahblog.files.wordpress.com/2016/10/screen-shot-2016-10-29-at-6-45-18-pm.png" alt="Screen Shot 2016-10-29 at 6.45.18 PM.png" width="175" height="363" />
+
+                <p class="wb-stl-normal" style="text-align: justify;">Now, since Apartment can never be created by the user, this nested form will actually be routing to the Apartment#Update method. Than it will take the list and comment attributes as the apartment params and will simply call the update active record method which does all the hard work for us. (Well...sort of)</p>
+
+                <img class="alignnone size-full wp-image-440" src="https://naveedshahblog.files.wordpress.com/2016/10/screen-shot-2016-10-31-at-9-13-12-am.png" alt="Screen Shot 2016-10-31 at 9.13.12 AM.png" width="598" height="230" />
+
+                <img class="alignnone size-full wp-image-442" src="https://naveedshahblog.files.wordpress.com/2016/10/screen-shot-2016-10-31-at-9-17-02-am.png" alt="Screen Shot 2016-10-31 at 9.17.02 AM.png" width="916" height="353" />
+
+                <img class="alignnone size-full wp-image-444" src="https://naveedshahblog.files.wordpress.com/2016/10/screen-shot-2016-10-31-at-9-18-13-am.png" alt="screen-shot-2016-10-31-at-9-18-13-am" width="546" height="168" />
+
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <hr>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>

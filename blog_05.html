@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Associations or blah?</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+ <nav>
+   <div class="collapse navbar-collapse">
+     <ul class="nav navbar-nav navbar-right">
+         <li>
+           <a class="page-scroll" href="index.html#blogs">Back to main page</a>
+         </li>
+     </ul>
+   </div>
+ </div>
+ </nav>
+    <header class="intro-header" style="background-image: url('img/post-bg.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>Associations of blah?</h1>
+                        <h2 class="subheading">Active Record Associations Crash Course</h2>
+                        <span class="meta">by Naveed Shah</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  <br>
+
+                  <p style="text-align: justify;">It was that time in the curriculum. I had forked one of the most dreaded labs, known to give programmers nightmares and emotional breakdowns. I can’t say I wasn’t warned when I decided to clone the repository and open up the monster on atom. By now you may know what I’m talking about. Yup, you’re right. It’s the lab that must never be mentioned.  Flatiron…B…N….B……Methods……</p>
+
+                  <p class="wb-stl-normal" style="text-align: center;"><img class=" size-full wp-image-29 aligncenter" src="assets/img/blog/b_05_pic1.jpg" /></p>
+
+                  <p style="text-align: justify;">Besides for the fact that the lab has 68 tests, which is very satisfying to see when all of them pass (yes I even recorded a video of it), the lab challenged us on implementing ActiveRecord Associations.</p>
+
+                  <p style="text-align: justify;">I love abstract logic. I guess since I was introduced to programming through C++, making up complex logic that magically works is something I enjoy.</p>
+
+                  <p style="text-align: justify;">Let’s say you have a model called Listing.</p>
+
+                  <p class="wb-stl-normal" style="text-align: center;"><img class=" size-full wp-image-29 aligncenter" src="assets/img/blog/b_05_pic2.jpg" /></p>
+
+                  <p style="text-align: justify;">It belongs to another model called city, and another model called neighborhood. It contains many models called reservation</p>
+
+                  <p style="text-align: justify;">Listing - > City</p>
+
+                  <p style="text-align: justify;">Listing - > Neighborhood</p>
+
+                  <p style="text-align: justify;">Listing < - Reservations</p>
+
+                  <p style="text-align: justify;">Simple enough?</p>
+
+                  <p class="wb-stl-normal" style="text-align: center;"><img class=" size-full wp-image-29 aligncenter" src="assets/img/blog/b_05_pic3.jpg" /></p>
+
+                  <p style="text-align: justify;">Now the fun begins:</p>
+
+                  <p class="wb-stl-normal" style="text-align: center;"><img width="700px" src="assets/img/blog/b_05_pic4.jpg" /></p>
+
+                  <p style="text-align: justify;">In this scenario, a User can be both a guest or a host. But there is no guest or host table. In order for this to work, we do something like this in the table we want to make the association with (in this case, the Listings table):</p>
+
+                  <p class="wb-stl-normal" style="text-align: center;"><img class=" size-full wp-image-29 aligncenter" src="assets/img/blog/b_05_pic5.jpg" /></p>
+
+                  <p style="text-align: justify;">Listing will know that host isn’t another physically existing table, but actually the user table. Now User can act as both a user, and a host. Let’s take this a step further:</p>
+
+                  <p class="wb-stl-normal" style="text-align: center;"><img class=" size-full wp-image-29 aligncenter" src="assets/img/blog/b_05_pic6.jpg" /></p>
+
+                  <p style="text-align: justify;">Reservation will know that guest isn’t another physically existing table, but actually the user table. Now User can act as a user, a host, and a guest.</p>
+
+                  <p style="text-align: justify;">But now before we pride ourselves as the masters of associations, there’s another neat feature we need to learn from the User table:</p>
+
+                  <p class="wb-stl-normal" style="text-align: center;"><img width="700px" src="assets/img/blog/b_05_pic7.jpg" /></p>
+
+                  <p style="text-align: justify;">Notice in line 3, the User has many trips, but there’s no trips table. The User is keeping track of all the times it was a guest at another User’s home. That list of “Trips”, is found by looking into the reservations table and finding every time this user was a guest.</p>
+
+                  <p style="text-align: justify;">Also in the second to last line, you’ll notice Users has any trip listings. Again there’s no trip listing table, but the User is able to keep track of every “rental” another User rented from this User. It can be found by going into the abstract table created above called “trips”, and find every time this user was a host.</p>
+
+                  <p style="text-align: justify;">If this wasn’t crazy enough, this user can track all of the hosts it ever had, by once again going through the trip listings table created above, and tracking the hosts of all it’s trips, using the host_id.</p>
+
+                  <p class="wb-stl-normal" style="text-align: center;"><img width="500px" src="assets/img/blog/b_05_pic8.jpg" /></p>
+
+                  <p style="text-align: justify;">If your brain didn’t just go “Blah”, then we need to get in touch!</p>
+
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <hr>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>

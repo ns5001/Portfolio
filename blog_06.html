@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Pure Functions</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+ <nav>
+   <div class="collapse navbar-collapse">
+     <ul class="nav navbar-nav navbar-right">
+         <li>
+           <a class="page-scroll" href="index.html#blogs">Back to main page</a>
+         </li>
+     </ul>
+   </div>
+ </div>
+ </nav>
+    <header class="intro-header" style="background-image: url('img/post-bg.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>Pure Functions</h1>
+                        <h2 class="subheading">A new species has arisen</h2>
+                        <span class="meta">by Naveed Shah</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  <br>
+
+                  <p class="wb-stl-normal" style="text-align: center;"><img height="300px" src="assets/img/blog/b_06.jpg" /></p>
+
+                  <p style="text-align: justify;">Starting the React track in the curriculum, the most interesting concept that has emerged so far is pure functions. Since I started programming roughly 2 1/2 years ago in college, I've never even considered there would be different species of functions. Well, you learn something everyday, and with newer technology such as React, you may learn something new multiple times a day.</p>
+
+                  <p style="text-align: justify;">In simple terms a pure function is a function that does not mutate or change any outside data</p>
+
+                  <p style="text-align: justify;">If I have an array declared with 5 numbers inside of it</p>
+
+                  <p style="text-align: justify;">var array = [1,2,3,4,5]</p>
+
+                  <p style="text-align: justify;">And I want to make a function that adds the number 10 to any array that gets passed in, I have 2 options. The impure way, or the way I am pretty much used to doing would be:</p>
+
+                  <p style="text-align: justify;">function addTen(array) {
+                                                    array.push(10)
+                                                      return array
+                                                                          }
+                  </p>
+
+                  <p style="text-align: justify;">Now if I call array again I would get this:</p>
+
+                  <p style="text-align: justify;">[1,2,3,4,5,10]</p>
+
+                  <p style="text-align: justify;">The original array has been changed. This isn't what we wanted.</p>
+
+                  <p style="text-align: justify;">Now that same function written in pure form would be:</p>
+
+                  <p style="text-align: justify;">function addTen(array) {
+                                                    return array.concat(10);
+                                                  }
+                  </p>
+
+                  <p style="text-align: justify;">It's doing the same thing as the impure function, returning the array passed in with an additional element of 10. But it won't change the original array that was passed in. Now if I call on my array I would get this:</p>
+
+                  <p style="text-align: justify;">[1,2,3,4,5]</p>
+
+                  <p style="text-align: justify;">Exactly how it was originally.</p>
+
+                  <p style="text-align: justify;">Another distinguishing factor of pure functions is no matter how many times I call addTen with the same array, it will give me the same output over and over. If I was to iterate over my array object with the impure version of addTen, by the 5th iteration the return value would be [1,2,3,4,5,10,10,10,10,10]. It would continue to change with every call. Where the pure function continues to give me the same return value no matter what iteration I am on. I will always receive [1,2,3,4,5,10], and the value of my array will always be [1,2,3,4,5]</p>
+
+                  <p style="text-align: justify;">When does this really come in handy?</p>
+
+                  <p style="text-align: justify;">If this wasn’t crazy enough, this user can track all of the hosts it ever had, by once again going through the trip listings table created above, and tracking the hosts of all it’s trips, using the host_id.</p>
+
+                  <p style="text-align: justify;">Writing your programs using pure functions will come into play when you will be working on cpu resource hogging projects. Maybe a game or a really fancy web app with a React front end? Pure functions are great for parallel processing across many CPUs since they are independent from any outside state. They simply don't care what's happening to the code around them. They will work the same way no matter what parameter values get passed into them. (Parallel Processing is when a process gets divided up and executed at the same time by different CPUs on the computer machine)</p>
+
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <hr>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>
